@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <script src="https://kit.fontawesome.com/83b811c89d.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .body {
+            display: flex;
+        }   
+        /*Navbar*/
+        .navbar {
+            background-color: #343a40;
+            padding-left: 12rem;
+            padding-right: 12rem;
+        }
+
+        .nav-link {
+            text-align: right;
+
+        }
+
+        .nav-link a {
+            display: inline-block;
+            color: rgba(255, 255, 255, 0.733);
+            font-size: 1.2rem;
+            padding: 1rem;
+            text-decoration: none;
+            transition: background-color 0.5s;
+        }
+
+        .nav-link .hover:hover {
+            background-color: #545d66;
+        }
+
+        .nav-title {
+            float: left;
+        }
+
+        .nav-hr {
+            color: rgba(255, 255, 255, 0.733);
+        }
+
+        /*Jumbotron*/
+        .jb {
+            background-color: #343a40;
+            padding-left: 12rem;
+            padding-right: 12rem;
+            height: 25rem;
+        }
+
+        .jb-title {
+            color: rgba(255, 255, 255, 0.849);
+            font-size: 3.5rem;
+            padding-top: 2.5rem;
+        }
+
+        .jb-content {
+            color: rgba(255, 255, 255, 0.733);
+            font-size: 1.4rem;
+            text-align: left;
+            max-width: 40rem;
+            margin-top: 1.5rem;
+        }
+
+        .jb-a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.6rem;
+        }
+
+        /*Card*/
+        .card {
+            margin-left: auto;
+            margin-top: 2.5rem;
+            border: 1px solid lightgray;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        .card-item {
+            margin-bottom: 5rem;
+        }
+
+        .card img {
+            width: 50rem;
+        }
+
+        .card .post-title {
+            color: #333;
+            font-size: 1.8rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card .post-content {
+            font-size: 1.1rem;
+            max-width: 50rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            opacity: 0.8;
+            line-height: 1.5rem;
+        }
+
+        .card-btn {
+            border: none;
+            padding: 10px 10px;
+            background-color: #007bff;
+            border-radius: 6px;
+            margin-left: 1.2rem;
+            color: white;
+            font-size: 1rem;
+        }
+        .card-btn:hover{
+            background-color: #396ba0;
+            cursor: pointer;
+        }
+        .card-ft {
+            padding: 1.2rem;
+            background-color: rgb(240, 240, 240);
+            font-size: 1.1rem;
+            opacity: 0.6;
+        }
+        .space{
+            height: 5rem;
+        }
+        /*Input*/
+        .inputs {
+            margin-right: auto;
+            margin-left: 3rem;
+            margin-top: 2.5rem;
+        }
+
+        .inp-card {
+            width: 22rem;
+            height: 10rem;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .inp-card2 {
+            width: 22rem;
+            height: 12rem;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .inp-title {
+            color: #555;
+            font-size: 1.3rem;
+            text-align: left;
+            font-weight: bold;
+            padding: 16px;
+            background-color: rgba(0, 0, 0, .06);
+            opacity: 0.8;
+        }
+
+        .inp-search {
+            padding: 8px 25px;
+            margin-top: 2rem;
+            margin-left: 1rem;
+            font-size: 1rem;
+            opacity: 0.4;
+        }
+
+        .inp-btn {
+            padding: 8px 10px;
+            background-color: #6c757d;
+            color: white;
+            font-size: 1rem;
+            margin-left: 0.8rem;
+            border-radius: 5px;
+        }
+
+        .inp-btn:hover {
+            background-color: #4f565c;
+            cursor: pointer;
+        }
+
+        .ctg-list {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .ctg-list ul {
+            margin-top: 1rem;
+            list-style-type: circle;
+        }
+
+        .ctg-list ul li {
+            margin-bottom: 1rem;
+        }
+
+        .ctg-list ul li a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 1rem;
+        }
+
+        .ctg-list ul li a:hover {
+            color: #343a40;
+            text-decoration: #343a40;
+        }
+
+        .wd-content {
+            text-align: left;
+            margin-left: 0.8rem;
+            font-size: 1.1rem;
+            margin-top: 1.2rem;
+            word-spacing: 3px;
+            opacity: 0.5;
+            line-height: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="nav-link">
+            <a href="#" class="nav-title" style="font-size: 1.2rem;"><i class="fas fa-blog"></i> Blog Template</a>
+            <a href="#" class="hover">Home</a>
+            <a href="#" class="hover">About</a>
+            <a href="#" class="hover">Services</a>
+            <a href="#" class="hover">Contact</a>
+        </div>
+    </div>
+    <hr class="nav-hr">
+    <div class="jb">
+        <p class="jb-title">Title of a longer <br> featured blog post</p>
+        <p class="jb-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit aliquam delectus qui
+            possimus repudiandae minima sed suscipit omnis maxime voluptatum?</p>
+        <br><br>
+        <a class="jb-a" href="#">Continue Reading...</a>
+    </div>
+    <div class="body">
+        <div class="card">
+            <img src="img/slider-3.jpeg" alt="">
+            <br><br>
+            <p class="post-title">Post Title</p>
+            <br>
+            <p class="post-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, quia. Corrupti,
+                eaque accusantium similique deserunt vitae maiores fugit porro at a incidunt corporis repellendus
+                soluta?</p>
+            <br><br>
+            <button class="card-btn">Read More</button>
+            <br><br>
+            <div class="card-ft">
+                Posted on July 4, 2021
+            </div>
+
+            <img src="img/slider-1.jpeg" alt="">
+            <br><br>
+            <p class="post-title">Post Title</p>
+            <br>
+            <p class="post-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, quia. Corrupti,
+                eaque accusantium similique deserunt vitae maiores fugit porro at a incidunt corporis repellendus
+                soluta?</p>
+            <br><br>
+            <button class="card-btn">Read More</button>
+            <br><br>
+            <div class="card-ft">
+                Posted on July 4, 2021
+            </div>
+
+            <img src="img/slider-2.jpeg" alt="">
+            <br><br>
+            <p class="post-title">Post Title</p>
+            <br>
+            <p class="post-content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis, quia. Corrupti,
+                eaque accusantium similique deserunt vitae maiores fugit porro at a incidunt corporis repellendus
+                soluta?</p>
+            <br><br>
+            <button class="card-btn">Read More</button>
+            <br><br>
+            <div class="card-ft">
+                Posted on July 4, 2021
+            </div>
+        </div>
+        <div class="inputs">
+            <div class="inp-card ">
+                <p class="inp-title">Search</p>
+                <input type="text" class="form-control inp-search" placeholder="Search for...">
+                <button class="inp-btn">Go!</button>
+            </div>
+            <div class="inp-card2 ">
+                <p class="inp-title">Categories</p>
+                <div class="ctg-list">
+                    <ul>
+                        <li> <a href="#">Web Design</a> </li>
+                        <li> <a href="#">Html</a> </li>
+                        <li> <a href="#">Angular</a> </li>
+                    </ul>
+                    <ul>
+                        <li> <a href="#">Javascript</a> </li>
+                        <li> <a href="#">Css</a> </li>
+                        <li> <a href="#">React</a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="inp-card2 ">
+                <p class="inp-title"> Widgets</p>
+                <p class="wd-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate eaque
+                    similique, consequatur tempore corporis possimus!</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
