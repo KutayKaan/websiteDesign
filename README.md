@@ -1,7 +1,12 @@
 # websiteDesign
+This project was developed with html and css. It is an example of a simple website home page.
 
 ## Header
-![aEkran Alıntısı](https://user-images.githubusercontent.com/114337850/230716730-fdb9dcb7-c041-416b-81f9-794fee2c0b64.PNG)
+![navbar](https://user-images.githubusercontent.com/114337850/230716898-72481d3d-dfc5-4941-8c05-f5ffe2492c37.PNG)
+
+## Card
+![card](https://user-images.githubusercontent.com/114337850/230716924-0659068d-bb72-4fce-8041-ba39ad43dfcc.PNG)
 
 ## Tools
-![Ekran Alıntısı](https://user-images.githubusercontent.com/114337850/230716733-64f359a4-a8c0-4f17-820c-ca5ec51be0e1.PNG)
+![tools](https://user-images.githubusercontent.com/114337850/230716926-6c8e572d-cab6-4845-869d-83f3fca7fbab.PNG)
+
